@@ -984,12 +984,14 @@ p {
     margin-bottom: 6px;
 }
 
-.product-info h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 8px;
+    color: var(--text-primary);
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1066,10 +1068,6 @@ p {
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .why-us-card::before {
@@ -1148,10 +1146,6 @@ p {
     padding: 40px 30px;
     transition: all var(--transition-base);
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 100%;
 }
 
 .service-card:hover {
@@ -1394,6 +1388,7 @@ p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.95rem;
     line-height: 1.6;
+    word-break: break-word;
 }
 
 .contact-card a:hover {
@@ -2126,13 +2121,13 @@ p {
 
     /* Why Us mobile */
     .why-us-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
     }
 
     /* Services mobile */
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
     }
 
@@ -2166,7 +2161,7 @@ p {
     }
 
     .contact-cards-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
